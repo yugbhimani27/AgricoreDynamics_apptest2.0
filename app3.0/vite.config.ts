@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',                 // ✅ IMPORTANT (Netlify)
+  base: './',               // 🔥 THIS FIXES 404
   build: {
-    outDir: '../docs',       // ✅ goes OUT of app3.0
+    outDir: '../docs',
     emptyOutDir: true,
   },
 })
