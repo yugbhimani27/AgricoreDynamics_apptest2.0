@@ -1,7 +1,9 @@
 import { Sprout } from 'lucide-react';
 import { Language, TRANSLATIONS } from '../config/translations';
 import { APP_CONFIG } from '../config/appConfig';
-import logo from 'figma:asset/364d38bcd29a951f52afe70e2ffe7a9ac60fcc5e.png';
+
+// ✅ VITE-COMPATIBLE LOCAL IMAGE IMPORT
+import logo from '../assets/logo.png';
 
 interface SplashScreenProps {
   language: Language;
@@ -23,12 +25,19 @@ export function SplashScreen({ language, onGetStarted }: SplashScreenProps) {
       <div className="flex flex-col items-center">
         {/* Company Logo */}
         <div className="mb-8 bg-white p-6 rounded-3xl shadow-2xl">
-          <img src={logo} alt="Agricore Dynamics" className="w-48 h-auto" />
+          <img
+            src={logo}
+            alt="Agricore Dynamics"
+            className="w-48 h-auto"
+          />
         </div>
 
         {/* App Icon */}
         <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
-          <Sprout className="w-10 h-10" style={{ color: APP_CONFIG.colors.primary }} />
+          <Sprout
+            className="w-10 h-10"
+            style={{ color: APP_CONFIG.colors.primary }}
+          />
         </div>
 
         {/* App Name and Subtitle */}
